@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/lahari http://www.mulesoft.org/schema/mule/l
 	<api-gateway:autodiscovery apiId="21081051" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="70f57f4c-667a-43a0-b6ce-1f5eb761749d" flowRef="flightbookingFlow" />
 	<flow name="flightbookingFlow" doc:id="66e381d6-f7b8-43c9-9d87-2b268ece3099" >
 		<http:listener doc:name="Listener" doc:id="b36efeb5-188a-47ea-b875-16ed52b37dd5" path="${listener.path}" config-ref="HTTP_Listener_config"/>
-		<logger level="INFO" doc:name="Logger" doc:id="13afffae-a46a-48e1-b86b-3cb7b642447f" message="start"/>
+		<logger level="INFO" doc:name="Logger" doc:id="13afffae-a46a-48e1-b86b-3cb7b642447f" message="start flow"/>
 		<http:request doc:name="Request" doc:id="59cc40c6-ae3f-483e-ac0b-d30a5b43552d" config-ref="HTTP_Request_config" path="/api/flights" method="GET">
 			<http:query-params ><![CDATA[#[output application/java
 ---
